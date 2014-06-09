@@ -1,4 +1,4 @@
-<html lang="en" ng-app="">
+<html lang="en" >
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,9 +23,19 @@
         <![endif]-->
         <style id="holderjs-style" type="text/css"></style>
     </head>
-    <body>
+    <body ng-app='dashboardApp'>
+        <!--Add navbar partial-->
+        <div ng-include="'partials/navbar.html'"></div>
 
-        <div ng-view></div>
+        <div class="container-fluid">
+            <div class="row">
+                <!--Load sidebar partial-->
+                <div ng-include="'partials/sidebar.html'"></div>
+
+                <div ng-view>
+                </div>
+            </div>
+        </div> <div ng-include="'partials/main.html'"></div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
