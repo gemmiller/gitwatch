@@ -15,6 +15,14 @@ dashboardApp.config(['$routeProvider',
                     templateUrl: 'partials/reports.html',
                     controller: 'DashCtrl'
                 }).
+                when('/analytics', {
+                    templateUrl: 'partials/analytics.html',
+                    controller: 'DashCtrl'
+                }).
+                when('/export', {
+                    templateUrl: 'partials/export.html',
+                    controller: 'DashCtrl'
+                }).
                 otherwise({
                     redirectTo: '/overview'
                 });
