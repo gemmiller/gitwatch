@@ -8,7 +8,7 @@ dashboardControllers.controller('DashCtrl', ['$scope','$http',
             $scope.holders = data;
         });
         $http.get('data/tabledata.json').success(function(data){
-            $scope.holders = data;
+            $scope.tablevalues= data;
         });
     }]);
 
