@@ -3,15 +3,15 @@
 
     <!-- Chart data-->
     <div class="row placeholders">
-        <div class="col-xs-6 col-sm-3 placeholder" ng-repeat="holder in holders">
-            <img data-src="{{holder.data-src}}" class="{{holder.class}}" alt="{{holder.alt}}" src="{{holder.src}}">
-            <h4>{{holder.name}}</h4>
-            <span class="text-muted">{{holder.info}}</span>
+        <div class="col-xs-6 col-sm-3" ng-repeat="chart in dash.charts">
+           <div>
+               <svg style="height: 300px;width: 300px;" pie-chart="chart"></svg>
+           </div>
         </div>
     </div>
 
     <!--Table Data-->
-    <h2 class="sub-header">Table Data </h2>
+   <h2 class="sub-header">Table Data </h2>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -27,7 +27,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="val in tablevalues | filter:search">
+            <tr ng-repeat="val in dash.tablevalues | filter:search">
                 <td>{{val.id_num}}</td>
                 <td>{{val.val1}}</td>
                 <td>{{val.val2}}</td>

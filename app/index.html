@@ -12,7 +12,7 @@
 
         <!-- Custom styles for this template -->
         <link href=css/dashboard.css rel="stylesheet">
-
+        <link href="components/d3/nv.d3.css" rel="stylesheet">
         <!-- Just for debugging purposes. Don't actually copy this line! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -22,29 +22,35 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
         <style id="holderjs-style" type="text/css"></style>
+        <script src="components/jquery/jquery-1.11.1.min.js"></script>
     </head>
     <body ng-app='dashboardApp'>
-        <!--Add navbar partial-->
+        <!--Load navbar partial-->
         <div ng-include="'partials/navbar.html'"></div>
 
         <div class="container-fluid">
             <div class="row">
                 <!--Load sidebar partial-->
                 <div ng-include="'partials/sidebar.html'"></div>
-
+                <!--Load main view-->
                 <div ng-view>
                 </div>
             </div>
-        </div> <div ng-include="'partials/main.html'"></div>
+        </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="components/d3/d3.v3.js"></script>
+    <script src="components/d3/nv.d3.js"></script>
     <script src="components/bootstrap/js/bootstrap.min.js"></script>
     <script src="components/angular/angular.min.js"></script>
     <script src="components/angular-route/angular-route.min.js"></script>
+    <script src="components/angular-resource/angular-resource.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
+    <script src="js/Dashboard/controllers/dashboardControllers.js"></script>
+    <script src="js/Dashboard/directives/pieChartDirective.js"></script>
+    <script src="js/Dashboard/services/dashboardServices.js"></script>
+
     </body>
 </html>
