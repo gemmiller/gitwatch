@@ -11,19 +11,19 @@ dashboardApp.config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('overview', {
                 url: '/overview',
-                templateUrl: 'partials/dashboard.html',
+                templateUrl: 'app/partials/dashboard.html',
                 controller: 'DashCtrl as dash'
             })
             .state('reports', {
                 url:'/reports',
-                templateUrl: 'partials/reports.html'
+                templateUrl: 'app/partials/reports.html'
             })
             .state('analytics',{
                 url:'/analytics',
-                templateUrl:'partials/analytics.html'
+                templateUrl:'app/partials/analytics.html'
             })
             .state('export',{
                 url:'/export',
-                templateUrl:'partials/export.hmtl'
+                templateUrl:'app/partials/export.html'
             })
         });

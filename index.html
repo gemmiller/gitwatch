@@ -1,0 +1,49 @@
+<html lang="en" >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="An apllication to give metrics on a git repository">
+        <meta name="author" content="Geoff Miller">
+        <title>Git Watch: a repo analytic</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="app/components/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href=app/css/dashboard.css rel="stylesheet">
+        <link href="app/components/d3/nv.d3.css" rel="stylesheet">
+
+        <style id="holderjs-style" type="text/css"></style>
+        <script src="app/components/jquery/jquery-1.11.1.min.js"></script>
+    </head>
+    <body ng-app='dashboardApp'>
+        <!--Load navbar partial-->
+        <div ng-include="'app/partials/navbar.html'"></div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <!--Load sidebar partial-->
+                <div ng-include="'app/partials/sidebar.html'"></div>
+                <!--Load main view-->
+                <div ui-view>
+                </div>
+            </div>
+        </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="app/components/d3/d3.v3.js"></script>
+    <script src="app/components/d3/nv.d3.js"></script>
+    <script src="app/components/bootstrap/js/bootstrap.min.js"></script>
+    <script src="app/components/angular/angular.min.js"></script>
+    <script src="app/components/angular-route/angular-route.min.js"></script>
+    <script src="app/components/angular-resource/angular-resource.js"></script>
+    <script src="app/components/angular-ui-router/angular-ui-router.js"></script>
+    <script src="app/js/app.js"></script>
+    <script src="app/js/Dashboard/controllers/dashboardControllers.js"></script>
+    <script src="app/js/Dashboard/directives/pieChartDirective.js"></script>
+    <script src="app/js/Dashboard/services/dashboardServices.js"></script>
+    </body>
+</html>
