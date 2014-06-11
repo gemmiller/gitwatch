@@ -33,7 +33,7 @@
                 <!--Load sidebar partial-->
                 <div ng-include="'partials/sidebar.html'"></div>
                 <!--Load main view-->
-                <div ng-view>
+                <div ui-view>
                 </div>
             </div>
         </div>
@@ -47,6 +47,7 @@
     <script src="components/angular/angular.min.js"></script>
     <script src="components/angular-route/angular-route.min.js"></script>
     <script src="components/angular-resource/angular-resource.js"></script>
+    <script src="components/angular-ui-router/angular-ui-router.js"></script>
     <script src="js/app.js"></script>
     <script src="js/Dashboard/controllers/dashboardControllers.js"></script>
     <script src="js/Dashboard/directives/pieChartDirective.js"></script>
